@@ -45,7 +45,7 @@ module RescueUniqueConstraint
     end
 
     def postgresql?
-      adapter_name == 'postgresql'
+      %w(postgresql postgis).include?(adapter_name)
     end
 
     def sqllite?
